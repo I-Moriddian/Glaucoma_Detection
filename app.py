@@ -41,6 +41,6 @@ else:
         st.balloons()
     else:
         st.write("""
-                 ## **Prediction:** You are affected by Glaucoma. Please consult an ophthalmologist as soon as possible.
+                 ## **Prediction:** You are affected by Glaucoma. Please consult an optamologist as soon as possible.
                  """
                  )
