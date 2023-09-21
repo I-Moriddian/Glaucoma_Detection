@@ -56,7 +56,6 @@ train_datagen = ImageDataGenerator(rescale = 1./255,
                                    shear_range=0.2,
                                    zoom_range=[0.8, 1.2],
                                     horizontal_flip=True,
-#                                     vertical_flip = True,
                                     fill_mode='nearest')
 
 test_datagen = ImageDataGenerator(rescale = 1./255)
@@ -71,7 +70,7 @@ test_set = test_datagen.flow_from_directory('/content/drive/My Drive/data/val',
                                             batch_size = 64,
                                             class_mode = 'binary')
 my_callbacks = [
-    # tf.keras.callbacks.EarlyStopping(patience=4, verbose=1),
+   
     tf.keras.callbacks.ReduceLROnPlateau(factor=0.1, patience=3, min_lr=0.00001, verbose=1),
     tf.keras.callbacks.ModelCheckpoint('my_model2.h5', 
     verbose=1, save_best_only=True, save_weights_only=False) 
