@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Glaucoma Detection Image Upload</title>
+</head>
+<body>
+    <h1>Upload a PNG Image</h1>
+    <form action="upload.php" method="post" enctype="multipart/form-data">
+        <label for="imageUpload">Choose a PNG Image:</label>
+        <input type="file" name="image" id="imageUpload" accept=".png" required>
+        <br>
+        <input type="submit" value="Upload">
+    </form>
+</body>
+</html>
